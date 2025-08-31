@@ -17,6 +17,18 @@
     /* ====== Brand Colors ====== */
     :root { --brand-green:#189201; --brand-dark:#111827; --brand-light:#F8FAFC; }
 
+    /* Remove browser zoom effect and center for web preview */
+    html, body {
+      zoom: 1 !important;
+      background: #F3F4F6;
+    }
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     /* ====== Reset ====== */
     html,body{margin:0!important;padding:0!important;height:100%!important;width:100%!important}
     *{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
