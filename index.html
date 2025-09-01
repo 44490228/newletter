@@ -14,6 +14,94 @@
   </xml>
   <![endif]-->
   <style>
+    /* True three-column header: logo left, title center, right empty, responsive */
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0;
+    }
+    .header-col-logo {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-width: 100px;
+    }
+    .header-col-title {
+      flex: 1 1 0%;
+      text-align: center;
+      font-size: 32px;
+      color: #189201;
+      font-weight: 700;
+      padding: 0 12px;
+    }
+    .header-col-empty {
+      flex: 0 0 100px;
+      min-width: 100px;
+    }
+    @media (max-width: 900px) {
+      .header-col-title { font-size: 20px; }
+      .header-col-logo, .header-col-empty { min-width: 60px; }
+    }
+    @media (max-width: 600px) {
+      .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-col-title {
+        text-align: left;
+        font-size: 16px;
+        padding: 4px 0;
+      }
+      .header-col-logo, .header-col-empty { min-width: 0; }
+    }
+    /* Enhanced header for client: large logo left, centered title, responsive */
+    .header-flex-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .header-logo {
+      max-width: 140px;
+      min-width: 80px;
+      width: 100%;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
+    }
+    .header-title {
+      flex: 1 1 0%;
+      text-align: center;
+      font-size: 28px;
+      color: #189201;
+      font-weight: 700;
+      margin: 0 12px;
+    }
+    .header-name {
+      flex: 1 1 0%;
+      text-align: right;
+      font-size: 32px;
+      color: #189201;
+      font-weight: 700;
+      display: none;
+    }
+    @media (max-width: 900px) {
+      .header-logo { max-width: 90px; }
+      .header-title { font-size: 18px; }
+    }
+    @media (max-width: 600px) {
+      .header-flex-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .header-logo { max-width: 60px; }
+      .header-title { font-size: 15px; text-align: left; margin: 4px 0 0 0; }
+    }
     /* Responsive header logo/name row */
     .header-flex-row {
       display: flex;
@@ -210,9 +298,12 @@
             <table role="presentation" width="100%" class="card border">
               <tr>
                 <td class="p-24">
-                  <div class="header-flex-row">
-                    <img class="header-logo" src="https://images.squarespace-cdn.com/content/v1/680689ffb9062a5ce4f48118/df95469d-e131-479b-85b6-51f4001131a0/group-people-holding-crypto-currency-market-concept-flat-cartoon-illustration.png?format=750w" alt="People and Chart Logo">
-                    <span class="header-title">The Option Tracker</span>
+                  <div class="header-row">
+                    <div class="header-col-logo">
+                      <img class="header-logo" src="https://images.squarespace-cdn.com/content/v1/680689ffb9062a5ce4f48118/df95469d-e131-479b-85b6-51f4001131a0/group-people-holding-crypto-currency-market-concept-flat-cartoon-illustration.png?format=750w" alt="People and Chart Logo" style="max-width: 120px; width: 100%; height: auto; display: block;">
+                    </div>
+                    <div class="header-col-title">The Option Tracker Weekly Newsletter</div>
+                    <div class="header-col-empty"></div>
                   </div>
                   <div class="small muted" style="margin-top:4px; text-align:right;">
                     <span>September 7, 2025</span>
