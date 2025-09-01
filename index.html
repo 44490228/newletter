@@ -14,6 +14,28 @@
   </xml>
   <![endif]-->
   <style>
+    @media (max-width: 600px) {
+      /* Center address row in footer on mobile */
+      .footer-address-mobile {
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
+      }
+      /* Stack footer cells vertically on mobile */
+      .footer-row-mobile {
+        display: block !important;
+      }
+      .footer-row-mobile > td {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding-bottom: 6px;
+      }
+      .footer-row-mobile > td:last-child {
+        padding-bottom: 0;
+        text-align: center !important;
+      }
+    }
     /* True three-column header: logo left, title center, right empty, responsive */
     .header-row {
       display: flex;
@@ -468,7 +490,7 @@
                 <div class="divider"></div>
                 <div style="height:12px;line-height:12px;">&nbsp;</div>
                 <table role="presentation" width="100%">
-                  <tr>
+                  <tr class="footer-row-mobile">
                     <td class="small muted" align="left">
                       <a href="%%view_email_url%%" target="_blank">View in browser</a> •
                       <a href="https://theoptiontracker.com/privacy" target="_blank">Privacy Policy</a> •
