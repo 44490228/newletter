@@ -48,14 +48,31 @@
     @media (max-width: 600px) {
       .header-row {
         flex-direction: column;
-        align-items: flex-start;
-      }
-      .header-col-title {
-        text-align: left;
-        font-size: 16px;
-        padding: 4px 0;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
       }
       .header-col-logo, .header-col-empty { min-width: 0; }
+      .header-col-logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .header-col-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 4px 0 0 0;
+        width: 100%;
+      }
+      .header-col-empty {
+        display: none !important;
+      }
+      .header-row + .small.muted {
+        margin-top: 0 !important;
+        text-align: center !important;
+        width: 100%;
+        display: block;
+      }
     }
     /* Enhanced header for client: large logo left, centered title, responsive */
     .header-flex-row {
